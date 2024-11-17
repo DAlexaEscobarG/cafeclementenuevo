@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="grey lighten-3">
+
+<nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img src="MicrosoftTeams-image (2).png" alt="logo" class="responsive-img" style="max-height: 60px;">
+            </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="pedidos/pedidos.html">Pedidos</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+          </ul>
+    
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="pedidos/pedidos.html">Pedidos</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+          </ul>
+          <a href="" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+ </nav>
+
+ <div class="container">
+    <h3 class="center-align yellow-text text-darken-2">Contactanos</h3>
+    
+    <form class="black-text">
+        <div class="input-field">
+            <input id="nombre" type="text" class="black-text" required>
+            <label for="nombre" class="black-text">Nombre/s</label>
+        </div>
+        
+        <div class="input-field">
+            <input id="apellido" type="text" class="black-text" required>
+            <label for="apellido" class="black-text">Apellido/s</label>
+        </div>
+        
+        <div class="input-field">
+            <input id="telefono" type="text" class="black-text" optiona>
+            <label for="telefono" class="black-text">Teléfono</label>
+        </div>
+        
+        <div class="input-field">
+            <input id="email" type="email" class="black-text" required>
+            <label for="email" class="black-text">Correo Electrónico</label>
+        </div>
+        
+        <div class="input-field">
+            <textarea id="comentario" class="materialize-textarea black-text" required></textarea>
+            <label for="comentario" class="black-text">Comentario</label>
+        </div>
+        
+        <div class="center-align">
+            <button type="submit" class="btn-large waves-effect waves-light purple darken-4">Enviar</button>
+        </div>
+    </form>
+</div>
+<br><br>
+
+<footer class="page-footer purple darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="yellow-text text-accent-3">Nosotros</h5>
+          <p class="grey-text text-lighten-4">Cafetería Clemente es un espacio inspirado en el muralismo mexicano, donde el arte y la tradición se unen con sabores únicos. Ofrecemos un ambiente acogedor y cultural, ideal para disfrutar de platillos y bebidas que celebran la esencia de México.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="yellow-text text-accent-3">Redes Sociales</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Instagram</a></li>
+            <li><a class="white-text" href="#!">TikTok</a></li>
+            <li><a class="white-text" href="#!">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="yellow-text text-accent-3">Politicas</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Terminos y condiciones</a></li>
+            <li><a class="white-text" href="#!">Cookies</a></li>
+            <li><a class="white-text" href="#!">Politica de privacidad</a></li>
+            <li><a class="yellow-text text-accent-3" href="#!">© 2024 Cafetería Clemente. Todos los derechos reservados.</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- Importa JavaScript de Materialize -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    margin-left: auto;
+    justify-content: flex-end;
+    font-family: "Imprima", sans-serif;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.abrir {
+    display: none;
+}
+
+.cerrar {
+    display: none;
+}
+
+
+.menu-title {
+    width: 80%; 
+    height: 113.73px;
+    text-align: center;
+    font-size: 68px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 20px auto; 
+   
+}
+
+.section-title {
+    width: 80%;
+    height: 85px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 20px auto;
+   
+}
+
+section {
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#order-summary {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#order-summary h3 {
+   
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#order-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#order-items li {
+    
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: "Imprima", sans-serif;
+}
+
+#total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D93F16;
+    text-align: center;
+    margin-top: 15px;
+    border-top: 2px solid #D93F16;
+    padding-top: 10px;
+}
+
+
+
+/*----------------------------------------------*/
+
+
+
+
+
+
+/*----------------------------------------------*/
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image-wrapper {
+    text-align: center;
+    max-width: 45%;
+    margin: 10px 10px;
+}
+
+.image-container img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+/*----------------------------------------------*/
+
+
+    
