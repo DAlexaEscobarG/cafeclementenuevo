@@ -12,6 +12,39 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
 
+            <style>
+        #cart-container {
+            position: fixed; top: 20px; right: 20px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        #cart-btn {
+            position: relative;
+        }
+
+        #cart-details {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 10px;
+            background-color: #8e24aa;
+        }
+
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cart-items li {
+            margin-bottom: 5px;
+        }
+    </style>
+
+
 </head>
 
 <body class="grey lighten-3">
@@ -40,24 +73,25 @@
     </nav>
 
     <!-- Carrito -->
-    <div id="cart-container" class="fixed-action-btn">
-        <a class="btn-floating btn-large purple" href="#" id="cart-btn">
-            <i class="material-icons">shopping_cart</i>
-        </a>
-        <div id="cart-details" class="card purple darken-4 white-text" style="display: none; position: absolute; top: 60px; right: 0; width: 200px;">
-            <div class="card-content">
-                <h5 class="responsive-text">Carrito</h5>
-                <ul id="cart-items" class="collection purple darken-4"></ul>
-                <p><strong>Total: </strong><span id="total-price">$0</span></p>
-                <a href="Pedidos/pedidos.html" class="btn waves-effect waves-light purple lighten-2 white-text">Comprar</a>
-            </div>
+<!-- Carrito -->
+<div id="cart-container" class="fixed-action-btn">
+    <a class="btn-floating btn-large purple" href="#" id="cart-btn">
+        <i class="material-icons">shopping_cart</i>
+    </a>
+    <div id="cart-details" class="card purple darken-4 white-text">
+        <div class="card-content">
+            <h5 class="responsive-text">Carrito</h5>
+            <ul id="cart-items" class="collection purple darken-4"></ul>
+            <p><strong>Total: </strong><span id="total-price">$0</span></p>
+            <a href="Pedidos/pedidos.html" class="btn waves-effect waves-light purple lighten-2 white-text">Comprar</a>
         </div>
     </div>
+</div>
 
-    <div id="carrito-lista" class="container">
-        <h5 class="center-align responsive-text">Productos seleccionados</h5>
-        <!-- Aquí se mostrarán los productos seleccionados -->
-    </div>
+<div id="carrito-lista" class="container">
+    <h5 class="center-align responsive-text">Productos seleccionados</h5>
+    <!-- Aquí se mostrarán los productos seleccionados -->
+</div>                                    
 
 
     <h3 class="center-align yellow-text text-darken-2">Menú</h3>
