@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jose Clemente</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <style>
+        #cart-container {
+            position: fixed; top: 20px; right: 20px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        #cart-btn {
+            position: relative;
+        }
+
+        #cart-details {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 10px;
+            background-color: #8e24aa;
+        }
+
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cart-items li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body class="grey lighten-3">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img src="MicrosoftTeams-image (2).png" alt="logo" class="responsive-img" style="max-height: 60px;">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="pedidos/pedidos.html">Pedidos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="pedidos/pedidos.html">Pedidos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+            <a href=".sidenav" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <!-- Carrito -->
+<div id="cart-container" class="fixed-action-btn">
+    <a class="btn-floating btn-large purple" href="#" id="cart-btn">
+        <i class="material-icons">shopping_cart</i>
+    </a>
+    <div id="cart-details" class="card purple darken-4 white-text">
+        <div class="card-content">
+            <h5></h5>
+            <ul id="cart-items"></ul>
+            <p><strong>Total: </strong><span id="total-price">$0</span></p>
+            <a href="Pedidos/pedidos.html">comprar</a>
+        </div>
+    </div>
+</div>
+
+<div id="carrito-lista">
+    <h5></h5>
+    <!-- Aquí se mostrarán los productos seleccionados -->
+</div>
+
+    <h3 class="center-align yellow-text text-darken-2">Menú</h3>
+<div class="row">
+
+    <h4 class="center-align yellow-text text-darken-2">Platillos Salados</h4>
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/chilaquil.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Chilaquiles<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Chilaquiles" data-price="120">comprar</a></p>
+                <p class="price">$120 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Chilaquiles<i class="material-icons right">close</i></span>
+                <p>Totopos bañados en salsa, acompañados de pollo desmenuzado, crema, queso fresco y cebolla morada.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/enchilada2.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Enchiladas<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Enchiladas" data-price="95">comprar</a></p>
+                <p class="price">$95 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Enchiladas<i class="material-icons right">close</i></span>
+                <p>Enchiladas rellenas de pollo, bañadas en salsa verde de tomatillo, con crema y queso.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/quesadilla2.jpeg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Quesadillas<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Quesadillas" data-price="80">comprar</a></p>
+                <p class="price">$80 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Quesadillas<i class="material-icons right">close</i></span>
+                <p>Tortillas de maíz rellenas de queso, acompañadas de guiso del día y salsa verde.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/tamal_rajas.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Tamal de rajas<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Tamal de Rajas" data-price="35">comprar</a></p>
+                <p class="price">$35 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Tamal de rajas<i class="material-icons right">close</i></span>
+                <p>Tamales rellenos de tiras de chile poblano y queso fresco, envueltos en hojas de maíz.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/tamal_rojo.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Tamal de rojo<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Tamal Rojo" data-price="40">comprar</a></p>
+                <p class="price">$40 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Tamal de rojo<i class="material-icons right">close</i></span>
+                <p>Tamales de carne de cerdo marinada en salsa de chile rojo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/tamal_elote.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Tamal de elote<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Tamal de Elote" data-price="45">comprar</a></p>
+                <p class="price">$45 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Tamal de elote<i class="material-icons right">close</i></span>
+                <p>Tamales dulces de elote fresco, ideales para acompañar con café o chocolate caliente.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <h4 class="center-align yellow-text text-darken-2">Postres</h4>
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/concha.jpeg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Conchas<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Concha" data-price="30">comprar</a></p>
+                <p class="price">$30 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Conchas<i class="material-icons right">close</i></span>
+                <p>Pan dulce con una capa crujiente de azúcar, ideal para acompañar con café.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/churro.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Churros<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Churro" data-price="35">comprar</a></p>
+                <p class="price">$35 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Churros<i class="material-icons right">close</i></span>
+                <p>Churros crujientes espolvoreados con azúcar y canela, perfectos para acompañar con chocolate caliente.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/arroz.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Arroz con leche<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Arroz con leche" data-price="40">comprar</a></p>
+                <p class="price">$40 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Arroz con leche<i class="material-icons right">close</i></span>
+                <p>Arroz cocido en leche con un toque de canela, servido frío o tibio.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/pan_muerto.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Pan de muerto<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Pan de Muerto" data-price="45">comprar</a></p>
+                <p class="price">$45 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Pan de muerto<i class="material-icons right">close</i></span>
+                <p>Pan tradicional de Día de Muertos, cubierto de azúcar y aromatizado con azahar.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/capirotada.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Capirotada<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Capirotada" data-price="50">comprar</a></p>
+                <p class="price">$50 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Capirotada<i class="material-icons right">close</i></span>
+                <p>Postre con pan, pasas, nueces y piloncillo, típico de la cuaresma.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/nieve.jpeg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Nieve<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Nieve" data-price="25">comprar</a></p>
+                <p class="price">$25 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Nieve<i class="material-icons right">close</i></span>
+                <p>Deliciosas nieves tradicionales de diversos sabores, ideales para refrescarse en cualquier momento.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <h4 class="center-align yellow-text text-darken-2">Bebidas</h4>
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/cafe_olla.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Café de olla<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Cafe de olla" data-price="40">comprar</a></p>
+                <p class="price">$40 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Café de olla<i class="material-icons right">close</i></span>
+                <p>Café preparado con canela, clavo y piloncillo, servido caliente o frío.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/chocolate.jpeg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Chocolate caliente<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Chocolate" data-price="35">comprar</a></p>
+                <p class="price">$35 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Chocolate caliente<i class="material-icons right">close</i></span>
+                <p>Chocolate espeso con un toque de canela, estilo tradicional mexicano.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/horchata.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Horchata<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Horchata" data-price="30">comprar</a></p>
+                <p class="price">$30 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Horchata<i class="material-icons right">close</i></span>
+                <p>Bebida de arroz con canela y vainilla, perfecta para cualquier momento.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/aguas.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Aguas frescas<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Aguas frescas" data-price="25">comprar</a></p>
+                <p class="price">$25 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Aguas frescas<i class="material-icons right">close</i></span>
+                <p>Agua fresca hecha al momento con frutas de temporada.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/manzanilla.jpeg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Té de manzanilla<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Té de manzanilla" data-price="20">comprar</a></p>
+                <p class="price">$20 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Té de manzanilla<i class="material-icons right">close</i></span>
+                <p>Té herbal con un toque suave, perfecto para relajarse.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="imagenes/insumos/champurrado.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Champurrado<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" data-product="Champurrado" data-price="50">comprar</a></p>
+                <p class="price">$50 MXN</p> <!-- Precio agregado aquí -->
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Champurrado<i class="material-icons right">close</i></span>
+                <p>Bebida espesa de chocolate con maíz, ideal para días frescos.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <footer class="page-footer purple darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="yellow-text text-accent-3">Nosotros</h5>
+                    <p class="grey-text text-lighten-4">Cafetería Clemente es un espacio inspirado en el muralismo
+                        mexicano, donde el arte y la tradición se unen con sabores únicos. Ofrecemos un ambiente
+                        acogedor y cultural, ideal para disfrutar de platillos y bebidas que celebran la esencia de
+                        México.</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="yellow-text text-accent-3">Redes Sociales</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Facebook</a></li>
+                        <li><a class="white-text" href="#!">Instagram</a></li>
+                        <li><a class="white-text" href="#!">TikTok</a></li>
+                        <li><a class="white-text" href="#!">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="yellow-text text-accent-3">Politicas</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Terminos y condiciones</a></li>
+                        <li><a class="white-text" href="#!">Cookies</a></li>
+                        <li><a class="white-text" href="#!">Politica de privacidad</a></li>
+                        <li><a class="yellow-text text-accent-3" href="#!">© 2024 Cafetería Clemente. Todos los derechos
+                                reservados.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+    <script>
+        // Inicializar variables globales para el carrito
+        let cart = {};
+
+        // Función para actualizar el carrito visualmente
+        function updateCart() {
+            let cartItemsList = document.getElementById("cart-items");
+            let totalPrice = document.getElementById("total-price");
+            cartItemsList.innerHTML = "";  // Limpiar los elementos del carrito
+            let total = 0;
+
+            // Recorrer los artículos del carrito y mostrarlos
+            for (let item in cart) {
+                let li = document.createElement("li");
+                li.textContent = `${cart[item].name} x${cart[item].quantity} - $${cart[item].price * cart[item].quantity}`;
+                cartItemsList.appendChild(li);
+                total += cart[item].price * cart[item].quantity;
+            }
+
+            // Actualizar el precio total
+            totalPrice.textContent = `$${total}`;
+
+            // Actualizar el contador del carrito
+            document.getElementById("cart-count").textContent = Object.keys(cart).length;
+        }
+
+        // Función para agregar productos al carrito
+        function addToCart(name, price) {
+            if (cart[name]) {
+                cart[name].quantity += 1;  // Si ya está en el carrito, incrementamos la cantidad
+            } else {
+                cart[name] = { name: name, price: price, quantity: 1 };  // Si no, lo agregamos con cantidad 1
+            }
+            updateCart();  // Actualizar la vista del carrito
+        }
+
+        // Función para mostrar u ocultar los detalles del carrito
+        document.getElementById("cart-btn").addEventListener("click", function() {
+            const cartDetails = document.getElementById("cart-details");
+            cartDetails.style.display = (cartDetails.style.display === "none" || cartDetails.style.display === "") ? "block" : "none";
+        });
+
+        // Agregar eventos de click a cada botón "comprar" de los productos
+        document.querySelectorAll("a[data-product]").forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                const productName = this.getAttribute("data-product");
+                const productPrice = parseFloat(this.getAttribute("data-price"));
+                addToCart(productName, productPrice);
+            });
+        });
+
+        function addToCart(name, price) {
+    if (cart[name]) {
+        cart[name].quantity += 1;  // Si ya está en el carrito, incrementamos la cantidad
+    } else {
+        cart[name] = { name: name, price: price, quantity: 1 };  // Si no, lo agregamos con cantidad 1
+    }
+
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    updateCart();  // Actualizar la vista del carrito
+}
+    </script>
+
+</body>
+
+</html>
